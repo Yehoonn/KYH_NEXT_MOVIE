@@ -1,4 +1,4 @@
-import { MOVIE_URL } from "../app/(home)/page";
+import { MOVIE_URL } from "../app/constants";
 import styles from "../styles/movie-detail.module.css";
 
 const getMovieDetail = async (id: string) => {

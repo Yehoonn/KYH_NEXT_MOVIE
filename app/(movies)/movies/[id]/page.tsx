@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import MovieDetail from "../../../../components/movie-detail";
 import MovieVideo from "../../../../components/movie-video";
-import { MOVIE_URL } from "../../../(home)/page";
+import { MOVIE_URL } from "../../../constants";
 
 interface IParams {
   params: { id: string };

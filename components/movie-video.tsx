@@ -1,4 +1,4 @@
-import { MOVIE_URL } from "../app/(home)/page";
+import { MOVIE_URL } from "../app/constants";
 
 const getMovieVideo = async (id: string) => {
   const response = await fetch(`${MOVIE_URL}/${id}/videos`);

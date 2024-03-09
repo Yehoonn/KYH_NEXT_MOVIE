@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "../styles/movie-main.module.css";
-import { MOVIE_URL } from "../app/(home)/page";
+import { MOVIE_URL } from "../app/constants";
 import { useRouter } from "next/navigation";
 
 const MovieMain = async ({
