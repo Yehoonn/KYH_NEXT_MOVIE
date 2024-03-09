@@ -1,10 +1,10 @@
 import Link from "next/link";
+import styles from "../../styles/main.module.css";
+import MovieMain from "../../components/movie-main";
 
 export const metadata = {
   title: "Home",
 };
-
-export const MOVIE_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 const getMovies = async () => {
   const response = await fetch(MOVIE_URL);
@@ -12,16 +12,20 @@ const getMovies = async () => {
   return json;
 };
 
+export const MOVIE_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
+
 const HomePage = async () => {
   const movies = await getMovies();
-
   return (
-    <div>
+    <div className={styles.div}>
       {movies.map((value) => {
         return (
-          <li key={value.id}>
-            <Link href={`/movies/${value.id}`}>{value.title}</Link>
-          </li>
+          <MovieMain
+            key={value.id}
+            id={value.id}
+            title={value.title}
+            poster_path={value.poster_path}
+          ></MovieMain>
         );
       })}
     </div>

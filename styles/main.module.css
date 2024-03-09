@@ -1,0 +1,9 @@
+.div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: inherit;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-top: 100px;
+}
